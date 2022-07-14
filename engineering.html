@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/dde87df238.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- <style>
+            .banner-img {
+                background-color: black;
+                background-image: url(images/Asset\ 1.png);
+                position: relative;
+                background-size: cover;
+                width: 100%;
+                height: auto;
+            }
+        </style> -->
+
+        <title>Department of Engineering</title>
+    </head>
+
+    <body>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script> 
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+        <!-- Navbar  -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+            <div class="container-fluid text-white">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Asset 2.png" alt="logo" height="auto" width="25%">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mx-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link hover-green" href="#">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                                    <a class="nav-link text-dark hover-green" href="#">Departments</a>
+                                </li> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active hover-green dropdown-toggle" href="new.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Departments
+                            </a>
+                            <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item hover-green text-white " href="#">Engineering</a></li>
+                                <li><a class="dropdown-item hover-green text-white " href="#">Computing</a></li>
+                                <li><a class="dropdown-item hover-green text-white " href="#">Biology</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-green" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover-red" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- carousel -->
+        <div class="container-fluid mx-0">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/eng-car-1.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/eng-car-2.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/eng-car-3.png" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- section-1 -->
+        <section>
+            <div class="container">
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Engineering.. <span class="text-muted"> An Introduction.</span>
+                        </h2>
+                        <p class="lead my-5">Engineering is the use of science and math to design or make things. People who do engineering are called engineers.
+                        They learn engineering at a college or university. Engineers usually design or build things. Some engineers also use
+                        their skills to solve technical problems. There are different types of engineers that design everything from computers
+                        and buildings to watches and websites. People have been creating engineering things for thousands of years.
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <img class="rounded shadow" src="images/eng-1.jpg" alt="bio-1" height="400" width="500">
+                
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="featurette-divider">
+        <!-- section-2 -->
+        <section>
+            <div class="container">
+                <div class="row featurette">
+                    <div class="col-md-7 order-md-3">
+                        <h2 class="featurette-heading">Degree Programs <span class="text-muted">We Offer..</span></h2>
+                        <p class="lead my-5">
+                            Your dream is to become an Engineer? Well, we are ready to make them come true. We offer a top level world-class Engineering Degree to our students.
+
+                            <ul>
+                                <li class="leading">BSc. in Electrical and Electronic Engineering</li>
+                                <li class="leading">BSc. in Software Engineering</li>
+                                <li class="leading">BSc. in Automobile Engineering</li>
+                            </ul>
+                        </p>
+                        <a href="apply_page.php">
+                            <button class="btn btn-primary my-3 mx-4 shadow">Enroll Now</button>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-5 order-md-1">
+                        <img class="rounded shadow" src="images/eng-2.jpg" alt="bio-1" height="400" width="auto">
+                
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="featurette-divider">
+        <!-- section-3 -->
+        <section>
+            <div class="container">
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">A Masters Degee? <span class="text-muted"> Why Not...</span>
+                        </h2>
+                        <p class="lead my-5">
+                            We offer a variety of Masters Degrees to our students in the department of Engineering.
+                            <ul>
+                                <li class="leading">MSc. in Electronic Engineering</li>
+                                <li class="leading">MSc. in Software Engineering</li>
+                                <li class="leading">MSc. in Automobile Engineering</li>
+                            </ul>
+                        </p>
+                        <a href="apply_page.php">
+                            <button class="btn btn-primary my-3 mx-4 shadow">Enroll Now</button>
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <img class="rounded shadow" src="images/eng-3.jpg" alt="bio-1" height="400" width="500">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="featurette-divider">
+
+        <!-- footer -->
+        <section>
+            <nav class="navbar bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <div class="container justify-content-center align-items-center">
+                        <div class="col">
+                            <div class="row  m-3">
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">UNIVERSITY</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">About Us</li>
+                                        <li class="footer-list-item">History</li>
+                                        <li class="footer-list-item">Chancellor</li>
+                                        <li class="footer-list-item">Vice Chancellor</li>
+                                        <li class="footer-list-item">Privacy Policy</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">ACADEMIC</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Faculties</li>
+                                        <li class="footer-list-item">Libraries</li>
+                                        <li class="footer-list-item">Institutes</li>
+                                        <li class="footer-list-item">Departments</li>
+                                        <li class="footer-list-item">Centers & Units</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">COURSES</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Postgraduate</li>
+                                        <li class="footer-list-item">Undergraduate</li>
+                                        <li class="footer-list-item">Diploma</li>
+                                        <li class="footer-list-item">Certificate</li>
+                                        <li class="footer-list-item">Online</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">RESEARCH</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Researchers</li>
+                                        <li class="footer-list-item">Research News</li>
+                                        <li class="footer-list-item">Research Repositories</li>
+                                        <li class="footer-list-item">Awards & Prices</li>
+                                        <li class="footer-list-item">Research Grants</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">PUBLICATIONS</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Conferences</li>
+                                        <li class="footer-list-item">Research Symposium</li>
+                                        <li class="footer-list-item">Newsletter</li>
+                                        <li class="footer-list-item">UCR Journal</li>
+                                        <li class="footer-list-item">Journals</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">CAMPUS LIFE</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Achievements</li>
+                                        <li class="footer-list-item">Arts & Culture</li>
+                                        <li class="footer-list-item">Social</li>
+                                        <li class="footer-list-item">Sports</li>
+                                        <li class="footer-list-item">Student's Blog</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row text-light">
+                                <div class="col navbar-brand">
+                                    <p class="logo-text"><img src="images/Asset 3.png" alt="rainbow-high-logo"
+                                            height="auto" width="10%"> &nbsp&nbsp&nbspAll Rights Reserved&reg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript">
+            var nav = document.querySelector('nav');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 100) {
+                    nav.classList.add('navbar-hide');
+                } else {
+                    nav.classList.remove('navbar-hide');
+                    navItem.classList.add();
+                }
+            });
+        </script>
+    </body>
+
+</html>

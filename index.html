@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/dde87df238.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <style>
+            .banner-img {
+                background-color: black;
+                background-image: url(images/Asset\ 1.png);
+                position: relative;
+                background-size: cover;
+                width: 100%;
+                height: auto;
+            }
+
+            a {
+                background-color: transparent;
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+
+        <title>Rainbow High University</title>
+    </head>
+
+    <body>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+        <!-- Navbar  -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Asset 3.png" alt="logo" height="auto" width="25%">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mx-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark hover-green" href="#">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link text-dark hover-green" href="#">Departments</a>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark hover-green dropdown-toggle" href="new.html"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Departments
+                            </a>
+                            <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item hover-green" href="engineering.html">Engineering</a></li>
+                                <li><a class="dropdown-item hover-green" href="computing.html">Computing</a></li>
+                                <li><a class="dropdown-item hover-green" href="biology.html">Biology</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark hover-green" href="#about-us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark hover-red" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- cover -->
+        <div class="banner-img w-100 vh-100 d-flex p-5 justify-content-start align-items-center">
+            <div class="content text-center">
+                <div class="row">
+                    <div class="col-md-4 glassmorph ">
+                        <h1 class="text-white p-2 bold-text">WELCOME!</h1>
+                        <p id="pretext" class="text-white justify-content-start p-2 lead">
+                            Welcome to Rainbow High University where the dreams of every student gets real. Rainbow High
+                            has the best instructors and lab facilities to make every student reach their full potential
+                            in their favourite fields. We also have the best sporting and study facilities among many
+                            universities in the country. Join with us and we will take you to your desired destination
+                            in life.
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <a href="#departments">
+                                    <div class="btn btn-primary">Departments</div>
+                                </a>
+                                <a href="apply_page.php">
+                                    <div class="btn btn-primary">Apply Now</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- acadamics -->
+        <section>
+            <div class="container d-flex justify-content-center align-items-center text-dark">
+                <div class="row my-5 text-align-center">
+                    <h2 class="bold-text">Academics</h2>
+                    <p class="text-muted">Prepairing students to make meaningful contributions as engaged citizens and leaders in a complex
+                        world</p>
+                    <div class="acadamic col-md-3 shadow round-border">
+                        <img class="" src="images/Asset 5.png" alt="" width="100%" height="auto">
+                        <p class="card-text bold-text my-2">Undergraduate Education</p>
+                    </div>
+                    <div class="acadamic col-md-3 shadow round-border">
+                        <img src="images/Asset 6.png" alt="" width="100%" height="auto">
+                        <p class="card-text bold-text my-2">Graduate Education</p>
+                    </div>
+                    <div class="acadamic col-md-3 shadow round-border">
+                        <img src="images/Asset 7.png" alt="" width="100%" height="auto">
+                        <p class="card-text bold-text my-2">Diploma Courses</p>
+                    </div>
+                    <div class="acadamic col-md-3 shadow round-border">
+                        <img src="images/Asset 8.png" alt="" width="100%" height="auto">
+                        <p class="card-text bold-text my-2">Certificate Courses</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- departments -->
+        <section id="departments">
+            <div class="container d-flex justify-content-center align-items-center text-dark">
+                <div class="row my-5 text-align-center">
+                    <h2 class="bold-text">Departments</h2>
+                    <p class="text-muted">Faculty Departments of Rainbow High University</p>
+                    <div class="acadamic col-md-4 shadow round-border">
+                        <a href="engineering.html">
+                            <img class="" src="images/engineering.jpg" alt="" width="100%" height="auto">
+                            <p class="card-text bold-text my-2">Engineering</p>
+                        </a>
+                    </div>
+                    <div class="acadamic col-md-4 shadow round-border">
+                        <a href="biology.html">
+                            <img src="images/biology.jpg" alt="" width="100%" height="auto">
+                            <p class="card-text bold-text my-2">Biology</p>
+                        </a>
+                    </div>
+                    <div class="acadamic col-md-4 shadow round-border">
+                        <a href="computing.html">
+                            <img src="images/computing.jpg" alt="" width="100%" height="auto">
+                            <p class="card-text bold-text my-2">Computing</p>
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <!-- about-us -->
+        <section id="about-us">
+            <div class="container ">
+                <div class="row m-3 text-align-center">
+                    <h2 class="bold-text">About Us</h2>
+                    <p class="text-muted">About Rainbow High Unversity</p>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <p class="justify-text lead">
+                            The Rainbow High University, in conformity with the vision of the university envisions “to
+                            be a
+                            dynamic, innovative and
+                            renowned center of excellence in learning, research, training and consultancy with emphasis
+                            on
+                            national relevance and
+                            international recognition in the different disciplines of every study field”. Its mission is
+                            “to
+                            promote learning,
+                            research and training among all members of the university, industry and community and to
+                            help
+                            individuals achieve their
+                            full potential through development of the whole person with a view to making significant
+                            contributions to the regional,
+                            national and global needs”.
+                        </p>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img class="rounded shadow" src="images/about-img.jpg" alt="about-img" height="300" width="800">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- news -->
+        <section>
+            <div class="container d-flex justify-content-center align-items-center text-dark">
+                <div class="row my-3 text-align-center">
+                    <h2 class="bold-text">Recent News</h2>
+                    <p class="text-muted">Updates from Rainbow High</p>
+                    <div class="col-md-4">
+                        <img class="" src="images/Asset 20.png" alt="" width="100%" height="auto">
+                        <p class="news-text py-4">Congratulations! Graduates, Rainbow High University Commencement
+                            Weekend - 2022</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col">
+                            <img class="" src="images/Asset 12.png" alt="" width="100%" height="auto">
+                            <p class="news-text">Rainbow High University - UNICEF Partnership Launch Program</p>
+                        </div>
+                        <div class="col">
+                            <img class="" src="images/Asset 13.png" alt="" width="100%" height="auto">
+                            <p class="news-text">Inter Departmental Debate Competetion - Faculty of Engineering 2021 / 2022</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="" src="images/Asset 14.png" alt="" width="100%" height="auto">
+                        <p class="news-text py-4">Scholarchip Awarding Ceremony 2022 - Faculty of Computing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- banner -->
+        <section>
+            <div class="container-fluid banner my-5 p-3">
+                <div class="container">
+                    <div class="row mx-5 my-2">
+                        <div class="col-md-3 justify-content-center align-items-center text-center">
+                            <p class="banner-text bold-text">Notices</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="auto" fill="currentColor"
+                                class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                            </svg>
+                        </div>
+                        <div class="col-md-3 justify-content-center align-items-center text-center">
+                            <p class="banner-text bold-text ">Procurements</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="auto" fill="currentColor"
+                                class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                            </svg>
+                        </div>
+                        <div class="col-md-3 justify-content-center align-items-center text-center">
+                            <p class="banner-text bold-text">Payments</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="auto" fill="currentColor"
+                                class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z" />
+                            </svg>
+                        </div>
+                        <div class="col-md-3 justify-content-center align-items-center text-center">
+                            <p class="banner-text bold-text">Vacancies</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50%" height="auto" fill="currentColor"
+                                class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                <path fill-rule="evenodd"
+                                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer -->
+        <section>
+            <nav class="navbar bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <div class="container justify-content-center align-items-center">
+                        <div class="col">
+                            <div class="row  m-3">
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">UNIVERSITY</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">About Us</li>
+                                        <li class="footer-list-item">History</li>
+                                        <li class="footer-list-item">Chancellor</li>
+                                        <li class="footer-list-item">Vice Chancellor</li>
+                                        <li class="footer-list-item">Privacy Policy</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">ACADEMIC</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Faculties</li>
+                                        <li class="footer-list-item">Libraries</li>
+                                        <li class="footer-list-item">Institutes</li>
+                                        <li class="footer-list-item">Departments</li>
+                                        <li class="footer-list-item">Centers & Units</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">COURSES</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Postgraduate</li>
+                                        <li class="footer-list-item">Undergraduate</li>
+                                        <li class="footer-list-item">Diploma</li>
+                                        <li class="footer-list-item">Certificate</li>
+                                        <li class="footer-list-item">Online</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">RESEARCH</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Researchers</li>
+                                        <li class="footer-list-item">Research News</li>
+                                        <li class="footer-list-item">Research Repositories</li>
+                                        <li class="footer-list-item">Awards & Prices</li>
+                                        <li class="footer-list-item">Research Grants</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">PUBLICATIONS</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Conferences</li>
+                                        <li class="footer-list-item">Research Symposium</li>
+                                        <li class="footer-list-item">Newsletter</li>
+                                        <li class="footer-list-item">UCR Journal</li>
+                                        <li class="footer-list-item">Journals</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2 text-white">
+                                    <h5 class="text-align-center footer-title">CAMPUS LIFE</h5>
+                                    <ul class="footer-list">
+                                        <li class="footer-list-item">Achievements</li>
+                                        <li class="footer-list-item">Arts & Culture</li>
+                                        <li class="footer-list-item">Social</li>
+                                        <li class="footer-list-item">Sports</li>
+                                        <li class="footer-list-item">Student's Blog</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row text-light">
+                                <div class="col navbar-brand">
+                                    <p class="logo-text"><img src="images/Asset 3.png" alt="rainbow-high-logo"
+                                            height="auto" width="10%"> &nbsp&nbsp&nbspAll Rights Reserved&reg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+
+        <!-- script -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript">
+            var nav = document.querySelector('nav');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 100) {
+                    nav.classList.add('navbar-hide');
+                } else {
+                    nav.classList.remove('navbar-hide');
+                    navItem.classList.add();
+                }
+            });
+        </script>
+    </body>
+
+</html>
