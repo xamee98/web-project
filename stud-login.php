@@ -30,7 +30,7 @@
     <!-- Navbar  -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/Asset 3.png" alt="logo" height="auto" width="25%">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                 <div class="mx-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark hover-green" href="#">Home</a>
+                        <a class="nav-link active text-dark hover-green" href="index.html">Home</a>
                     </li>
                     <!-- <li class="nav-item">
                             <a class="nav-link text-dark hover-green" href="#">Departments</a>
@@ -51,16 +51,16 @@
                             Departments
                         </a>
                         <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item hover-green" href="#">Engineering</a></li>
-                            <li><a class="dropdown-item hover-green" href="#">Computing</a></li>
-                            <li><a class="dropdown-item hover-green" href="#">Biology</a></li>
+                            <li><a class="dropdown-item hover-green" href="engineering.html">Engineering</a></li>
+                            <li><a class="dropdown-item hover-green" href="computing.html">Computing</a></li>
+                            <li><a class="dropdown-item hover-green" href="biology.html">Biology</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark hover-green" href="#">About Us</a>
+                        <a class="nav-link text-dark hover-green" href="index.html#about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark hover-red" href="apply_page.php">Login</a>
+                        <a class="nav-link text-dark hover-red" href="login.html">Login</a>
                     </li>
                     <!-- <li class="nav-item">
                             <a class="nav-link text-white" href="#">Contact</a>

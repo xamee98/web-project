@@ -59,20 +59,20 @@
                             <a class="nav-link text-dark hover-green" href="#">Departments</a>
                         </li> -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-dark hover-green dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link text-dark hover-green dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Departments
                         </a>
                         <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item hover-green" href="#">Engineering</a></li>
-                            <li><a class="dropdown-item hover-green" href="#">Computing</a></li>
-                            <li><a class="dropdown-item hover-green" href="#">Biology</a></li>
+                            <li><a class="dropdown-item hover-green" href="engineering.html">Engineering</a></li>
+                            <li><a class="dropdown-item hover-green" href="computing.html">Computing</a></li>
+                            <li><a class="dropdown-item hover-green" href="biology.html">Biology</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark hover-green" href="#">About Us</a>
+                        <a class="nav-link text-dark hover-green" href="index.html#about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark hover-red" href="apply_page.php">Apply Now</a>
+                        <a class="nav-link text-dark hover-red" href="login.html">Login</a>
                     </li>
                     <!-- <li class="nav-item">
                             <a class="nav-link text-white" href="#">Contact</a>
