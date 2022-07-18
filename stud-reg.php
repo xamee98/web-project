@@ -76,28 +76,36 @@
                 <img class="center" src="images/graduated.png" alt="" width="100%" height="auto">
             </div>
             <div class="p-2 col-md-6 d-flex align-items-center justify-content-center">
-                <form class="form" action="includes/studlogin-handler.php" method="POST">
-                    <div class="form-group my-3">
+                <form class="form" action="includes/studreg-handler.php" method="POST">
+                    <div class="form-group">
+                        <label class="my-2 bold-text" for="name">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="John Doe" autofocus required>
+                    </div>
+                    <div class="form-group">
                         <label class="my-2 bold-text" for="email">Email</label>
                         <input type="email" class="form-control" name="email" placeholder="someone@example.com" autofocus required>
                     </div>
-                    <div class="form-group my-3">
-                        <label class="my-2 bold-text" for="pwd">Password</label>
+                    <div class="form-group">
+                        <label class="my-2 bold-text" for="pwd">Enter a Password</label>
                         <input type="password" name="pwd" class="form-control" placeholder="***************" required>
                     </div>
-                    <div class="form-group d-flex justify-content-center ">
-                        <input type="submit" value="Login" name="login" class="btn btn-outline-success mx-3 px-3 shadow">
+                    <div class="form-group">
+                        <label class="my-2 bold-text" for="pwd-conf">Confirm Password</label>
+                        <input type="password" name="pwd-conf" class="form-control" placeholder="***************" required>
+                    </div>
+                    <div class="form-group d-flex justify-content-center my-3">
+                        <input type="submit" value="Register" name="register" class="btn btn-outline-success mx-3 px-3 shadow">
                     </div>
                     <div class="dropdown-divider"></div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
-                            <p class="text-muted leading">New User?</p>
+                            <p class="text-muted leading">Already Registered?</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col d-flex justify-content-center">
-                            <a href="stud-reg.php">
-                                <div class="btn btn-outline-success shadow">Register</div>
+                            <a href="stud-login.php">
+                                <div class="btn btn-outline-success shadow">Login</div>
                             </a>
                         </div>
                     </div>
@@ -106,12 +114,16 @@
                         <div class="col d-flex justify-content-center">
                             <?php
                             if (isset($_GET['error'])) {
-                                if ($_GET['error'] == "usernotexist") {
-                                    echo "<p class='text-danger'>User does not exist!</p>";
-                                } else if ($_GET['error'] == "wrongpwd") {
-                                    echo "<p class='text-danger'>Wrond password!</p>";
-                                } else if ($_GET['error'] == "loginsuccess") {
-                                    echo "<p class='text-success'>Student Logged In Successfully!</p>";
+                                if ($_GET['error'] == "invalidemail") {
+                                    echo "<p class='text-danger'>Check Email!</p>";
+                                } else if ($_GET['error'] == "pwdmatchfailed") {
+                                    echo "<p class='text-danger'>Passwords do not match!</p>";
+                                } else if ($_GET['error'] == "emailtaken") {
+                                    echo "<p class='text-danger'>Email already in use!</p>";
+                                } else if ($_GET['error'] == "stmtfailed") {
+                                    echo "<p class='text-danger'>Something went wrong!</p>";
+                                } else if ($_GET['error'] == "none") {
+                                    echo "<p class='text-success'>Student Registered Successfully!. Login Now</p>";
                                 }
                             }
                             ?>

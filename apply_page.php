@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 
-    <title>Apply for ABC University</title>
+    <title>Apply for Rainbow High University</title>
     <style>
         body {
             background-color: ghostwhite;
@@ -86,24 +86,30 @@
     <div id="form-title" class="container">
         <h2 class="display-6">Application Form</h2>
         <div class="dropdown-divider"></div>
-        <form action="" method="POST">
+        <form action="#" method="POST">
             <section>
                 <div class="row m-5">
                     <h5>Full Name</h5>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="fname" autofocus>
+                            <input type="text" class="form-control" name="fname" id="fname" autofocus>
                             <small class="form-text text-muted">First Name</small>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="lname">
+                            <input type="text" class="form-control" name="lname" id="lname">
                             <small class="form-text text-muted">Last Name</small>
                         </div>
                     </div>
                 </div>
                 <div class="row m-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nic">NIC</label>
+                            <input class="form-control" type="text" name="nic" id="nic">
+                        </div>
+                    </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="bdate">Birthday</label>
@@ -179,8 +185,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <h5>GPA</h5>
-                            <input class="form-control" type="text" name="gpa">
+                            <h5>Z-Score</h5>
+                            <input class="form-control" type="text" name="z-score">
                         </div>
                     </div>
                 </div>
@@ -344,6 +350,15 @@
         </form>
     </div>
 
+    <?php 
+    
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $nic = $_POST['nic'];
+        $bday = $_POST['bdate'];
+        
+    ?>
+
     <!-- footer -->
     <section>
         <nav class="navbar bg-dark navbar-dark">
@@ -436,6 +451,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>

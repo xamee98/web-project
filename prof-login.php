@@ -77,7 +77,7 @@
                 <img class="center" src="images/professor.png" alt="" width="100%" height="auto">
             </div>
             <div class="p-2 col-md-6 d-flex align-items-center justify-content-center">
-                <form class="form" action="student.php" method="POST">
+                <form class="form" action="includes/lectlogin-handler.php" method="POST">
                     <div class="form-group my-3">
                         <label class="my-2 bold-text" for="email">Email</label>
                         <input type="email" class="form-control" name="email" placeholder="someone@example.com" autofocus required>
@@ -87,8 +87,36 @@
                         <input type="password" name="pwd" class="form-control" placeholder="***************" required>
                     </div>
                     <div class="form-group d-flex justify-content-center ">
-                        <input type="submit" value="Submit" name="submit" class="btn btn-outline-success mx-3 px-3 shadow">
-                        <input type="reset" value="Reset" name="reset" class="btn btn-outline-danger mx-3 px-4 shadow">
+                        <input type="submit" value="Submit" name="login" class="btn btn-outline-success mx-3 px-3 shadow">
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <p class="text-muted leading">New User?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <a href="prof-reg.php">
+                                <div class="btn btn-outline-success shadow">Register</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <?php
+                            if (isset($_GET['error'])) {
+                                if ($_GET['error'] == "usernotexist") {
+                                    echo "<p class='text-danger'>User does not exist!</p>";
+                                } else if ($_GET['error'] == "wrongpwd") {
+                                    echo "<p class='text-danger'>Wrond password!</p>";
+                                } else if ($_GET['error'] == "loginsuccess") {
+                                    echo "<p class='text-success'>Lecturer Logged In Successfully!</p>";
+                                }
+                            }
+                            ?>
+                        </div>
                     </div>
                 </form>
             </div>

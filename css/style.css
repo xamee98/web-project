@@ -18,6 +18,15 @@ body {
     animation-duration: 0.5s;
 }
 
+.acadamic:hover::after {
+    box-shadow: 2px 2px 5px black;
+    animation-name: acaAnimation;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+
+
 .icon {
     height: 150%;
     width: auto;
@@ -61,6 +70,14 @@ a {
 
 .dropdown-item {
     color: #adb5bd;
+}
+
+.error-failed {
+    color: red;
+}
+
+.error-success {
+    color: green;
 }
 
 .no-round-edges {

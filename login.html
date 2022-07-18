@@ -11,12 +11,32 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <style>
+            @keyframes avatarAnimation {
+                from {
+                    width: 50%;
+                    height: auto;
+                    font-size: medium;
+                }
+                to {
+                    width: 60%;
+                    height: auto;
+                    font-size: large;
+                }
+            }
+
             body {
                 background-color: rgba(243, 219, 174, 0.788);
             }
+
+            .avatar-img:hover {
+                animation: avatarAnimation 1s forwards;
+            }
+            .avatar-img:hover::after {
+                animation: avatarAnimation 1s backwards ;
+            }   
         </style>
 
-        <title>Rainbow High University</title>
+        <title>Login Here</title>
     </head>
 
     <body>
@@ -78,17 +98,17 @@
             <div class="row glassmorph rounded shadow m-5 d-flex align-items-center justify-content-center">
                 <div class="col-md-6 p-3">
                     <a href="stud-login.php">
-                        <img class="center" src="images/graduated.png" alt="" width="50%" height="auto">
+                        <img class="center avatar-img" src="images/graduated.png" alt="" width="50%" height="auto">
                     </a>
 
-                    <p class="card-text bold-text my-2 text-center">Student Login</p>
+                    <p class="card-text bold-text my-2 text-center avatar-text">Student Login</p>
                 </div>
-                
+
                 <div class="col-md-6 p-3">
                     <a href="prof-login.php">
-                        <img class="center" src="images/professor.png" alt="" width="50%" height="auto">
+                        <img class="center avatar-img" src="images/professor.png" alt="" width="50%" height="auto">
                     </a>
-                    <p class="card-text bold-text my-2 text-center">Lecturer Login</p>
+                    <p class="card-text bold-text my-2 text-center avatar-text">Lecturer Login</p>
                 </div>
             </div>
         </div>
