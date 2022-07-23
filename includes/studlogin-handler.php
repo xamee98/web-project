@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if(isset($_POST['login'])) {
 
     $email = $_POST['email'];
@@ -10,4 +12,4 @@ if(isset($_POST['login'])) {
     require_once 'handler-funcs.php';
 
     loginStud($conn, $email, $pwd);
-}
+}    

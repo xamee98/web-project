@@ -111,8 +111,8 @@
                                     echo "<p class='text-danger'>User does not exist!</p>";
                                 } else if ($_GET['error'] == "wrongpwd") {
                                     echo "<p class='text-danger'>Wrond password!</p>";
-                                } else if ($_GET['error'] == "loginsuccess") {
-                                    echo "<p class='text-success'>Lecturer Logged In Successfully!</p>";
+                                } else if ($_GET['error'] == "notloggedin") {
+                                    echo "<p class='text-danger'>Please Login!</p>";
                                 }
                             }
                             ?>

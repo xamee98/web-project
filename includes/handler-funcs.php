@@ -88,6 +88,31 @@ function emailExistsLect($conn, $email)
     mysqli_stmt_close($stmt);
 }
 
+function studentExists($conn, $email) {
+    $result = true;
+
+    $sql = "SELECT * FROM student_subject WHERE email = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../student.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row;
+    } else {
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
 
 function createStudent($conn, $name, $email, $pwd)
 {
@@ -131,6 +156,30 @@ function createLect($conn, $name, $email, $pwd)
     exit();
 }
 
+function nameFind($conn, $email)
+{
+
+    $sql = "SELECT * FROM student_login WHERE email = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../stud-reg.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row;
+    } else {
+        $result = false;
+        return $result;
+    }
+}
+
+
 function loginStud($conn, $email, $pwd) {
     $userExists = emailExists($conn, $email);
 
@@ -148,7 +197,8 @@ function loginStud($conn, $email, $pwd) {
         }else if($checkPwd === true) {
             session_start();
             $_SESSION['email'] = $userExists['email'];
-            header("location: ../stud-login.php?error=loginsuccess");
+
+            header("location: stud-handler.php");
             exit();
         }
     }
@@ -171,8 +221,43 @@ function loginLect($conn, $email, $pwd)
         } else if ($checkPwd === true) {
             session_start();
             $_SESSION['email'] = $userExists['email'];
-            header("location: ../prof-login.php?error=loginsuccess");
+            $_SESSION['name'] = $userExists['name'];
+            header("location: ../lecturer.php");
             exit();
         }
     }
+}
+
+function createSubject($conn, $name, $email, $stream, $sub_1, $sub_2, $sub_3) {
+    
+    if(!studentExists($conn, $email)) {
+        $sql = "INSERT INTO student_subject VALUES (?,?,?,?,?,?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            header("location: ../student.php?error=subregfailed");
+            exit();
+        }
+
+        mysqli_stmt_bind_param($stmt, "ssssss", $name, $email, $stream, $sub_1, $sub_2, $sub_3);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+    } else {
+        header("location: ../stud-profile.php?msg=userexists");
+    }
+}
+
+function changeSubject($conn, $sub_1, $sub_2, $sub_3) {
+
+    $result = true;
+    $sql = "UPDATE student_subject SET sub_1=?, sub_2=?, sub_3=?;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+        $result = false;
+        exit();
+        return $result;
+    }
+    mysqli_stmt_bind_param($stmt, "sss", $sub_1, $sub_2, $sub_3);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $result;
 }

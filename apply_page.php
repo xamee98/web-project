@@ -350,15 +350,6 @@
         </form>
     </div>
 
-    <?php 
-    
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $nic = $_POST['nic'];
-        $bday = $_POST['bdate'];
-        
-    ?>
-
     <!-- footer -->
     <section>
         <nav class="navbar bg-dark navbar-dark">
