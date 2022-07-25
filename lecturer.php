@@ -53,30 +53,8 @@ if (!$_SESSION['email']) {
                 <div class="mx-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-dark hover-green" href="stud-profile.php">Show Profile</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                            <a class="nav-link text-dark hover-green" href="#">Departments</a>
-                        </li> -->
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link text-dark hover-green dropdown-toggle" href="new.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Departments
-                        </a>
-                        <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item hover-green" href="engineering.html">Engineering</a></li>
-                            <li><a class="dropdown-item hover-green" href="computing.html">Computing</a></li>
-                            <li><a class="dropdown-item hover-green" href="biology.html">Biology</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- <li class="nav-item">
-                        <a class="nav-link text-dark hover-green" href="index.html#about-us">About Us</a>
-                    </li> -->
-                    <li class="nav-item">
                         <a class="nav-link active text-dark hover-red" href="includes/logout-handler.php">Logout</a>
                     </li>
-                    <!-- <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
-                        </li> -->
                 </ul>
             </div>
         </div>
@@ -86,7 +64,7 @@ if (!$_SESSION['email']) {
         <?php echo "<h2 class='display-6'>Welcome " . $_SESSION['name'] . "</h2>"; ?>
         <div class="row m-5 d-flex justify-content-start">
             <div class="col-md-6">
-                <p class="leading">View Student Details</p>
+                <p class="leading">View / Change Student Details</p>
                 <div class="dropdown-divider"></div>
             </div>
         </div>
@@ -143,8 +121,8 @@ if (!$_SESSION['email']) {
                             <th class="px-5 py-3" scope="row">Email</th>
                             <td class="px-5 py-3"><?php print_r($row['email']) ?></td>
                             <td class="px-5 py-3">
-                                <div class="row">
-                                    <form action="" method="POST">
+                                <!-- <div class="row">
+                                    <form action="includes/subupdate-handler.php" method="POST">
                                         <div class="col"></div>
                                         <div class="form-group">
                                             <input class="form-control" type="text" name="n-email">
@@ -153,7 +131,7 @@ if (!$_SESSION['email']) {
                                             <input type="submit" value="Update">
                                         </div>
                                     </form>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                         <tr>
@@ -161,13 +139,17 @@ if (!$_SESSION['email']) {
                             <td class="px-5 py-3"><?php print_r($row['stream']) ?></td>
                             <td class="px-5 py-3">
                                 <div class="row">
-                                    <form action="" method="POST">
+                                    <form action="includes/subupdate-handler.php" method="POST">
                                         <div class="col"></div>
                                         <div class="form-group">
-                                            <input class="form-control" type="text" name="n-email">
+                                            <select name="n-stream" class="form-control">
+                                                <option selected>Engineering</option>
+                                                <option>Biology</option>
+                                                <option>Computer Science</option>
+                                            </select>
                                         </div>
                                         <div class="form-group my-2">
-                                            <input type="submit" value="Update">
+                                            <input class="btn btn-outline-primary" type="submit" value="Update">
                                         </div>
                                     </form>
                                 </div>
@@ -178,13 +160,23 @@ if (!$_SESSION['email']) {
                             <td class="px-5 py-3"><?php print_r($row['sub_1']) ?></td>
                             <td class="px-5 py-3">
                                 <div class="row">
-                                    <form action="" method="POST">
+                                    <form action="includes/subupdate-handler.php" method="POST">
                                         <div class="col"></div>
                                         <div class="form-group">
-                                            <input class="form-control" type="text" name="n-email">
+                                            <select name="n-sub1" class="form-control">
+                                                <option>Advanced Mathematics</option>
+                                                <option>Electronics</option>
+                                                <option>Architecture</option>
+                                                <option>Microbiology</option>
+                                                <option>Cell Biology</option>
+                                                <option>Anatomy</option>
+                                                <option>Web Development</option>
+                                                <option>Software Engineering</option>
+                                                <option>Information Security</option>
+                                            </select>
                                         </div>
                                         <div class="form-group my-2">
-                                            <input type="submit" value="Update">
+                                            <input class="btn btn-outline-primary" type="submit" value="Update">
                                         </div>
                                     </form>
                                 </div>
@@ -195,13 +187,23 @@ if (!$_SESSION['email']) {
                             <td class="px-5 py-3"><?php print_r($row['sub_2']) ?></td>
                             <td class="px-5 py-3">
                                 <div class="row">
-                                    <form action="" method="POST">
+                                    <form action="includes/subupdate-handler.php" method="POST">
                                         <div class="col"></div>
                                         <div class="form-group">
-                                            <input class="form-control" type="text" name="n-email">
+                                            <select name="n-sub2" class="form-control">
+                                                <option>Advanced Mathematics</option>
+                                                <option>Electronics</option>
+                                                <option>Architecture</option>
+                                                <option>Microbiology</option>
+                                                <option>Cell Biology</option>
+                                                <option>Anatomy</option>
+                                                <option>Web Development</option>
+                                                <option>Software Engineering</option>
+                                                <option>Information Security</option>
+                                            </select>
                                         </div>
                                         <div class="form-group my-2">
-                                            <input type="submit" value="Update">
+                                            <input class="btn btn-outline-primary" type="submit" value="Update">
                                         </div>
                                     </form>
                                 </div>
@@ -212,13 +214,23 @@ if (!$_SESSION['email']) {
                             <td class="px-5 py-3"><?php print_r($row['sub_3']) ?></td>
                             <td class="px-5 py-3">
                                 <div class="row">
-                                    <form action="" method="POST">
+                                    <form action="includes/subupdate-handler.php" method="POST">
                                         <div class="col"></div>
                                         <div class="form-group">
-                                            <input class="form-control" type="text" name="n-email">
+                                            <select name="n-sub3" class="form-control">
+                                                <option>Advanced Mathematics</option>
+                                                <option>Electronics</option>
+                                                <option>Architecture</option>
+                                                <option>Microbiology</option>
+                                                <option>Cell Biology</option>
+                                                <option>Anatomy</option>
+                                                <option>Web Development</option>
+                                                <option>Software Engineering</option>
+                                                <option>Information Security</option>
+                                            </select>
                                         </div>
                                         <div class="form-group my-2">
-                                            <input type="submit" value="Update">
+                                            <input class="btn btn-outline-primary" type="submit" value="Update">
                                         </div>
                                     </form>
                                 </div>

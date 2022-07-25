@@ -246,17 +246,83 @@ function createSubject($conn, $name, $email, $stream, $sub_1, $sub_2, $sub_3) {
     }
 }
 
-function changeSubject($conn, $sub_1, $sub_2, $sub_3) {
+function changeSub1($conn, $sub_1) {
 
     $result = true;
-    $sql = "UPDATE student_subject SET sub_1=?, sub_2=?, sub_3=?;";
+    $sql = "UPDATE student_subject SET sub_1=?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         $result = false;
         exit();
         return $result;
     }
-    mysqli_stmt_bind_param($stmt, "sss", $sub_1, $sub_2, $sub_3);
+    mysqli_stmt_bind_param($stmt, "s", $sub_1);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $result;
+}
+
+function changeSub2($conn, $sub_2)
+{
+
+    $result = true;
+    $sql = "UPDATE student_subject SET sub_2=?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        $result = false;
+        exit();
+        return $result;
+    }
+    mysqli_stmt_bind_param($stmt, "s", $sub_2);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $result;
+}
+
+function changeSub3($conn, $sub_3)
+{
+
+    $result = true;
+    $sql = "UPDATE student_subject SET sub_3=?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        $result = false;
+        exit();
+        return $result;
+    }
+    mysqli_stmt_bind_param($stmt, "s", $sub_3);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $result;
+}
+
+function updateEmail($conn, $nEmail) {
+
+    $result = true;
+    $sql = "UPDATE student_subject SET email=?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        $result = false;
+        exit();
+        return $result;
+    }
+    mysqli_stmt_bind_param($stmt, "s", $nEmail);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $result;
+
+}
+
+function updateStream($conn, $nStream) {
+    $result = true;
+    $sql = "UPDATE student_subject SET stream=?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        $result = false;
+        exit();
+        return $result;
+    }
+    mysqli_stmt_bind_param($stmt, "s", $nStream);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     return $result;
